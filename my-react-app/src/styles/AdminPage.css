@@ -1,0 +1,210 @@
+/* AdminPage.css */
+
+.admin-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(120deg, #f8f9fa 60%, #e3f0ff 100%);
+  min-height: 100vh;
+}
+
+.admin-page h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #1a2947;
+  letter-spacing: 1px;
+}
+
+.admin-page h4 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #3a4a5d;
+  font-size: 1.2rem;
+}
+
+.content-card {
+  background: #ffffff;
+  padding: 2rem 1.5rem;
+  margin-top: 1.5rem;
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.09);
+  transition: transform 0.18s cubic-bezier(.4,2,.6,1), box-shadow 0.18s;
+}
+
+.content-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.13);
+}
+
+textarea, input[type="text"] {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+  border: 1.5px solid #d0d7e2;
+  border-radius: 14px;
+  box-sizing: border-box;
+  resize: vertical;
+  background: #f6f8fa;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+textarea:focus, input[type="text"]:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.13);
+  background: #fff;
+}
+
+button {
+  background: linear-gradient(90deg, #2563eb 60%, #1e40af 100%);
+  color: #fff;
+  padding: 1rem 2.2rem;
+  border: none;
+  border-radius: 14px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.25s, box-shadow 0.25s, transform 0.15s;
+  display: block;
+  margin: 2rem auto 0 auto;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.09);
+}
+
+button:hover {
+  background: linear-gradient(90deg, #1e40af 60%, #2563eb 100%);
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.18);
+  transform: translateY(-2px) scale(1.03);
+}
+
+img {
+  max-width: 100%;
+  max-height: 250px;
+  margin-top: 1rem;
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+/* LayoutSelector-styling */
+.layout-selector {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+  transition: box-shadow 0.2s;
+}
+
+.layout-selector:hover {
+  box-shadow: 0 4px 18px rgba(37, 99, 235, 0.10);
+}
+
+.layout-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.2rem;
+}
+
+.layout-option {
+  background: #f1f5fa;
+  border: 2px solid transparent;
+  border-radius: 14px;
+  padding: 1.1rem 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.22s;
+  font-weight: 600;
+  color: #495057;
+  font-size: 1.05rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+.layout-option:hover {
+  background: #e0edff;
+  border-color: #2563eb;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.13);
+}
+
+.layout-option.selected {
+  background: #d0e2ff;
+  border-color: #2563eb;
+  color: #2563eb;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.11);
+}
+
+.bild-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.bild-input-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.bild-fil-label {
+  display: inline-block;
+  cursor: pointer;
+  background-color: #2563eb;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  margin-left: 8px;
+  transition: background 0.2s;
+}
+
+.bild-fil-label:hover {
+  background-color: #1e40af;
+}
+
+.bild-preview {
+  margin-top: 0.5rem;
+  max-width: 100%;
+  max-height: 250px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  display: block;
+}
+
+.content-input-row {
+  margin-bottom: 1rem;
+}
+
+/* Responsivitet */
+@media (max-width: 900px) {
+  .admin-page {
+    max-width: 100vw;
+    padding: 1rem;
+  }
+  .content-card {
+    padding: 1.2rem 0.7rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .layout-options {
+    grid-template-columns: 1fr;
+  }
+  .admin-page h2 {
+    font-size: 1.4rem;
+  }
+  .content-card {
+    padding: 0.7rem 0.3rem;
+  }
+}
